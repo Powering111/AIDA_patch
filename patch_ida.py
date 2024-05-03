@@ -37,7 +37,7 @@ def patch_img(idx,imgpath):
     if(len(image_binary)) <= img_maxlen:
         patched_binary = patched_binary[:img_pos] + image_binary + b'\0'*(img_maxlen-len(image_binary)) + patched_binary[img_pos+img_maxlen:]
     else:
-        print(f"cannot patch {imgpath} at position {hex(img_pos)}, image size is {hex(len(image_binary))}, which is smaller than {hex(img_maxlen)}")
+        print(f"cannot patch {imgpath} at position {hex(img_pos)}, image size is {hex(len(image_binary))}, which is bigger than {hex(img_maxlen)}")
 
 
 # patch icon images
